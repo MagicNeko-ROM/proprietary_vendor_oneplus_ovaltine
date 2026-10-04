@@ -1,8 +1,0 @@
-# PENDING-BLOBS(CPH2415_15.0.0.700)
-#
-# 本文件是 extract-files.py 的输入清单，最终由
-#   device/oneplus/ovaltine/extract-files.py -s <CPH2415_15.0.0.700 解包目录>
-# 重新生成（24 个固件分区见 proprietary-firmware.txt，不在此文件内）。
-#
-# 目前为占位空清单：等 t9 的 700 完整包落到 build:/mnt/build/rebuild/pkgs/ 并解包后，
-# 由提取步骤覆盖本文件。禁止使用 15.0.0.1301 及之后的 blobs。
