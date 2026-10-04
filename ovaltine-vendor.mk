@@ -1403,9 +1403,6 @@ PRODUCT_PACKAGES += \
     lib_rectify \
     libaiboost \
     libaiboost_hexagon \
-    libaiboost_qnn_sr \
-    libaiboost_sr \
-    libaiboost_ubwc \
     libaideblur \
     libaisal \
     libaisd \

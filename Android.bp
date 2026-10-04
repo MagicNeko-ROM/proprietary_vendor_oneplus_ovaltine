@@ -7512,7 +7512,7 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     prefer: true,
-    soc_specific: true,
+    system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -7565,7 +7565,7 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     prefer: true,
-    soc_specific: true,
+    system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -9560,84 +9560,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaiboost_qnn_sr",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libaiboost_qnn_sr.so",
-            ],
-            shared_libs: [
-                "libz",
-                "libdl",
-                "libm",
-                "liblog",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libaiboost_sr",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libaiboost_sr.so",
-            ],
-            shared_libs: [
-                "libz",
-                "libdl",
-                "libm",
-                "liblog",
-                "libaiboost_qnn_sr",
-                "libaiboost_ubwc",
-                "libcdsprpc",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libaiboost_ubwc",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libaiboost_ubwc.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcdsprpc",
-                "libm",
-                "libc",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libaideblur",
     owner: "oneplus",
     strip: {
@@ -11169,8 +11091,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libhidlbase",
-                "vendor.dolby_sp.hardware.dmssp@2.0",
-                "libdapparamstorage_sp",
                 "libcutils",
                 "libutils",
                 "liblog",
@@ -11182,6 +11102,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     device_specific: true,
 }
@@ -12270,7 +12191,7 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     prefer: true,
-    device_specific: true,
+    system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -12431,7 +12352,7 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     prefer: true,
-    device_specific: true,
+    system_ext_specific: true,
 }
 
 prebuilt_rfsa {
