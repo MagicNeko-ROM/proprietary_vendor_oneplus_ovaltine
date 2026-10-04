@@ -1,0 +1,17 @@
+//
+// Automatically generated file. DO NOT MODIFY
+//
+// PENDING-BLOBS(CPH2415_15.0.0.700): 本文件最终由
+//   device/oneplus/ovaltine/extract-files.py + setup-makefiles.py
+// 在 CPH2415_15.0.0.700(EX01) 的 vendor/odm/system_ext/product/my_* 上重新生成。
+// 当前仅为 soong_namespace 骨架，保证 TARGET_DEVICE=ovaltine 时 soong 能解析本目录。
+//
+
+soong_namespace {
+    imports: [
+        "hardware/oplus",
+        "hardware/qcom-caf/sm8450",
+        "vendor/oneplus/sm8450-common",
+        "vendor/qcom/opensource/commonsys-intf/display",
+    ],
+}
