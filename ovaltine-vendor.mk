@@ -1152,6 +1152,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/ovaltine/proprietary/vendor/lib64/camera/imx588.pb:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/imx588.pb
 
 PRODUCT_PACKAGES += \
+    manifest_oplus_fingerprint_aidl_v2.xml \
     camera.device@1.0-impl \
     com.arcsoft.node.eisv2 \
     com.arcsoft.node.smooth_transition \
