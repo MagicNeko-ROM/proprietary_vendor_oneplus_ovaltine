@@ -12887,3 +12887,12 @@ install_symlink {
     installed_location: "etc/wifi/qca6490/bdwlang.elf",
     symlink_target: "/odm/etc/wifi/bdwlang.elf",
 }
+
+prebuilt_etc_xml {
+    name: "manifest_oplus_fingerprint_aidl_v2.xml",
+    owner: "oneplus",
+    src: "proprietary/odm/etc/vintf/manifest/manifest_oplus_fingerprint_aidl_v2.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    device_specific: true,
+}
