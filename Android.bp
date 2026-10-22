@@ -7566,6 +7566,7 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     system_ext_specific: true,
+    odm_available: true,
 }
 
 cc_prebuilt_library_shared {
@@ -8172,7 +8173,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.hardware.graphics.mapper@4.0",
-                "android.hardware.graphics.common-V6-ndk",
+                "android.hardware.graphics.common-V7-ndk",
                 "libgralloctypes",
                 "libqdMetaData",
                 "vendor.qti.hardware.display.mapper@4.0",
