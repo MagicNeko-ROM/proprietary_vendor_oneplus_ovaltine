@@ -2,3 +2,6 @@
 # 获取方式见 radio/README.md，或直接跑 tools/fetch-firmware.sh
 radio/*
 !radio/README.md
+
+# tools/fetch-firmware.sh 下载的固件压缩包
+/ovaltine-radio-*.tar.zst
