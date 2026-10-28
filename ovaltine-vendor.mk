@@ -1558,3 +1558,18 @@ PRODUCT_PACKAGES += \
     odm_etc_wifi_qca6490_bdwlang_b0c \
     odm_etc_wifi_qca6490_bdwlang_b0e \
     odm_etc_wifi_qca6490_bdwlang_elf
+
+# Qualcomm secure element HAL (eSE). com.android.se was ANRing every 30s on
+# "executing service com.android.se/.SecureElementService, waited 20003ms"
+# because android.hardware.secure_element@1.2::ISecureElement/eSE1 had no
+# implementation to bind to. The binary, its impl library and the QTI eSE power
+# manager stubs were present in the OEM odm image but never copied into this
+# tree. The interface libraries themselves (secure_element@1.0/1.1/1.2.so,
+# libGPTEE_vendor) already ship from sm8450-common.
+PRODUCT_COPY_FILES += \
+    vendor/oneplus/ovaltine/proprietary/odm/bin/hw/vendor.qti.secure_element@1.2-service:$(TARGET_COPY_OUT_ODM)/bin/hw/vendor.qti.secure_element@1.2-service \
+    vendor/oneplus/ovaltine/proprietary/odm/lib64/android.hardware.secure_element@1.0-impl.so:$(TARGET_COPY_OUT_ODM)/lib64/android.hardware.secure_element@1.0-impl.so \
+    vendor/oneplus/ovaltine/proprietary/odm/lib64/vendor.qti.esepowermanager@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.qti.esepowermanager@1.0.so \
+    vendor/oneplus/ovaltine/proprietary/odm/lib64/vendor.qti.esepowermanager@1.1.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.qti.esepowermanager@1.1.so \
+    vendor/oneplus/ovaltine/proprietary/odm/etc/init/vendor.qti.secure_element@1.2-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.qti.secure_element@1.2-service.rc
+
