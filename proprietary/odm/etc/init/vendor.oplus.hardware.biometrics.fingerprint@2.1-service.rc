@@ -5,8 +5,6 @@ service fps_hal /odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-ser
     class late_start
     user system
     group system input uhid
-    # The original binary is patched to register as IFingerprint/oplusfp; the
-    # proxy AIDL HAL owns IFingerprint/default and forwards to it.
 
 on boot
 
